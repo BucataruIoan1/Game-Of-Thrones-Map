@@ -1,0 +1,19 @@
+<div class="container">
+    <svg viewBox="0 0 5649 3684" xmlns="http://www.w3.org/2000/svg">
+        <image class="got-image" xlink:href="assets/images/gameofthrones.jpg"
+               width="5649" height="3684"
+               preserveAspectRatio="xMidYMid meet" />
+        
+        <text x="25%" y="50%" class="map-text left" text-anchor="middle" dominant-baseline="middle">Westeros</text>
+        
+        <text x="75%" y="50%" class="map-text right" text-anchor="middle" dominant-baseline="middle">Essos</text>
+        
+        <line x1="2050" y1="0" x2="2050" y2="3684" class="divider-line" />
+    </svg>
+    <div class="sound-control" (click)="toggleSound()">
+        <audio *ngIf="isSoundOn" id="background-audio" autoplay>
+            <source src="assets/songs/got-song.mp3" type="audio/mpeg" />
+        </audio>
+        <mat-icon>{{isSoundOn ? 'volume_down' : 'volume_off'}}</mat-icon>
+    </div>
+</div>
